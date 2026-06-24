@@ -1,0 +1,244 @@
+/* Custom CSS untuk PWA Resep Masakan (Bebas Internet/CDN) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Perbaikan: Menggunakan align-items murni CSS */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ea580c;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #1f2937;
+}
+
+.btn-install {
+    background-color: #ea580c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-install:hover {
+    background-color: #c2410c;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #f97316, #f59e0b);
+    color: white;
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #ffedd5;
+    max-width: 448px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Main Content & Grid */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border-bottom: 3px solid #ea580c;
+    width: max-content;
+    padding-bottom: 4px;
+}
+
+.grid-resep {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Card Style */
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #f3f4f6;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ea580c;
+    background-color: #fff7ed;
+    padding: 4px 8px;
+    border-radius: 9999px;
+}
+
+.card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.card p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.card-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.btn-detail {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ea580c;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal Pop Up */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal.hidden { display: none; }
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 512px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-size: 28px;
+    color: #9ca3af;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 208px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.modal-title-line {
+    height: 4px; width: 64px;
+    background-color: #ea580c;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.modal h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ea580c;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.modal ul, .modal ol {
+    padding-left: 20px;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.modal li { margin-bottom: 4px; }
+
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 24px 16px;
+    margin-top: 48px;
+    font-size: 14px;
+}
